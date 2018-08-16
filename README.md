@@ -1,7 +1,7 @@
-# Leen15/route53-dynamic-dns
-[![Docker Build Statu](https://img.shields.io/docker/build/Leen15/route53-dynamic-dns.svg)](https://hub.docker.com/r/Leen15/route53-dynamic-dns) [![](https://images.microbadger.com/badges/image/Leen15/route53-dynamic-dns.svg)](https://microbadger.com/images/Leen15/route53-dynamic-dns "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/Leen15/route53-dynamic-dns.svg)](https://microbadger.com/images/Leen15/route53-dynamic-dns "Get your own version badge on microbadger.com") [![Docker Pulls](https://img.shields.io/docker/pulls/Leen15/route53-dynamic-dns.svg)](https://hub.docker.com/r/Leen15/route53-dynamic-dns/)
+# leen15/route53-dynamic-dns
+[![Docker Build Statu](https://img.shields.io/docker/build/leen15/route53-dynamic-dns.svg)](https://hub.docker.com/r/leen15/route53-dynamic-dns) [![](https://images.microbadger.com/badges/image/leen15/route53-dynamic-dns.svg)](https://microbadger.com/images/leen15/route53-dynamic-dns "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/leen15/route53-dynamic-dns.svg)](https://microbadger.com/images/leen15/route53-dynamic-dns "Get your own version badge on microbadger.com") [![Docker Pulls](https://img.shields.io/docker/pulls/leen15/route53-dynamic-dns.svg)](https://hub.docker.com/r/leen15/route53-dynamic-dns/)
 
-Update [Amazon Route53](http://aws.amazon.com/route53/) hosted zone with current public IP address (from [OpenDNS](https://diagnostic.opendns.com/myip)).  No cost alternative to DynamicDNS services such as Dyn, No-IP, etc.  Designed to be simple and efficient with the ability to run as a [Node.js process](#nodejs-process) or in a [Docker Container](https://hub.docker.com/r/Leen15/route53-dynamic-dns/).
+Update [Amazon Route53](http://aws.amazon.com/route53/) hosted zone with current public IP address (from [OpenDNS](https://diagnostic.opendns.com/myip)).  No cost alternative to DynamicDNS services such as Dyn, No-IP, etc.  Designed to be simple and efficient with the ability to run as a [Node.js process](#nodejs-process) or in a [Docker Container](https://hub.docker.com/r/leen15/route53-dynamic-dns/).
 
 # Table of Contents
 - [Environment Variables](#environment-variables)
@@ -54,7 +54,7 @@ Stable version built from `release/v1.0` branch.  The code is also available as 
 ### Pull Image
 Pull image from DockerHub.  Replace `[version]` with desired version (ex: `v1.0`).
 ```bash
-$ docker pull Leen15/route53-dynamic-dns:[verison]
+$ docker pull leen15/route53-dynamic-dns:[verison]
 ```
 
 ### Run Container
@@ -73,7 +73,7 @@ $ docker run -d -t -i --rm \
     -e SES_TO_ADDRESS= \
     -e SES_FROM_ADDRESS= \
     -e UPDATE_FREQUENCY= \
-    Leen15/route53-dynamic-dns:[verison]
+    leen15/route53-dynamic-dns:[verison]
 ```
 
 ### View Useful Container Data
@@ -84,7 +84,7 @@ $ docker ps -a
 Sample output
 ```
 CONTAINER ID    IMAGE                           COMMAND        CREATED            STATUS            PORTS       NAMES
-9998c92ff8a1    Leen15/route53-dynamic-dns   "npm start"    45 seconds ago     Up 44 seconds                 route53-dynamic-dns
+9998c92ff8a1    leen15/route53-dynamic-dns   "npm start"    45 seconds ago     Up 44 seconds                 route53-dynamic-dns
 ```
 View logs of `STDOUT` from `CONTAINER ID` (copy from output above)
 ```bash
