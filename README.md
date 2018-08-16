@@ -1,7 +1,7 @@
-# sjmayotte/route53-dynamic-dns
-[![Docker Build Statu](https://img.shields.io/docker/build/sjmayotte/route53-dynamic-dns.svg)](https://hub.docker.com/r/sjmayotte/route53-dynamic-dns) [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fsjmayotte%2Froute53-dynamic-dns.svg?type=shield)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fsjmayotte%2Froute53-dynamic-dns?ref=badge_shield) [![](https://images.microbadger.com/badges/image/sjmayotte/route53-dynamic-dns.svg)](https://microbadger.com/images/sjmayotte/route53-dynamic-dns "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/sjmayotte/route53-dynamic-dns.svg)](https://microbadger.com/images/sjmayotte/route53-dynamic-dns "Get your own version badge on microbadger.com") [![Docker Pulls](https://img.shields.io/docker/pulls/sjmayotte/route53-dynamic-dns.svg)](https://hub.docker.com/r/sjmayotte/route53-dynamic-dns/)
+# Leen15/route53-dynamic-dns
+[![Docker Build Statu](https://img.shields.io/docker/build/Leen15/route53-dynamic-dns.svg)](https://hub.docker.com/r/Leen15/route53-dynamic-dns) [![](https://images.microbadger.com/badges/image/Leen15/route53-dynamic-dns.svg)](https://microbadger.com/images/Leen15/route53-dynamic-dns "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/Leen15/route53-dynamic-dns.svg)](https://microbadger.com/images/Leen15/route53-dynamic-dns "Get your own version badge on microbadger.com") [![Docker Pulls](https://img.shields.io/docker/pulls/Leen15/route53-dynamic-dns.svg)](https://hub.docker.com/r/Leen15/route53-dynamic-dns/)
 
-Update [Amazon Route53](http://aws.amazon.com/route53/) hosted zone with current public IP address (from [OpenDNS](https://diagnostic.opendns.com/myip)).  No cost alternative to DynamicDNS services such as Dyn, No-IP, etc.  Designed to be simple and efficient with the ability to run as a [Node.js process](#nodejs-process) or in a [Docker Container](https://hub.docker.com/r/sjmayotte/route53-dynamic-dns/).
+Update [Amazon Route53](http://aws.amazon.com/route53/) hosted zone with current public IP address (from [OpenDNS](https://diagnostic.opendns.com/myip)).  No cost alternative to DynamicDNS services such as Dyn, No-IP, etc.  Designed to be simple and efficient with the ability to run as a [Node.js process](#nodejs-process) or in a [Docker Container](https://hub.docker.com/r/Leen15/route53-dynamic-dns/).
 
 # Table of Contents
 - [Environment Variables](#environment-variables)
@@ -49,12 +49,12 @@ Image is built from official [`node:alpine`](https://hub.docker.com/_/node/) ima
 Automated build triggers with every `git push` to `master` branch.  This version is not guarenteed to be stable.  If you are looking for a stable version, please use `route53-dynamic-dns:v1.0`.
 
 #### `route53-dynamic-dns:v1.0`
-Stable version built from `release/v1.0` branch.  The code is also available as [GitHub Release](https://github.com/sjmayotte/route53-dynamic-dns/releases) with tag `v1.0`.
+Stable version built from `release/v1.0` branch.  The code is also available as [GitHub Release](https://github.com/Leen15/route53-dynamic-dns/releases) with tag `v1.0`.
 
 ### Pull Image
 Pull image from DockerHub.  Replace `[version]` with desired version (ex: `v1.0`).
 ```bash
-$ docker pull sjmayotte/route53-dynamic-dns:[verison]
+$ docker pull Leen15/route53-dynamic-dns:[verison]
 ```
 
 ### Run Container
@@ -73,7 +73,7 @@ $ docker run -d -t -i --rm \
     -e SES_TO_ADDRESS= \
     -e SES_FROM_ADDRESS= \
     -e UPDATE_FREQUENCY= \
-    sjmayotte/route53-dynamic-dns:[verison]
+    Leen15/route53-dynamic-dns:[verison]
 ```
 
 ### View Useful Container Data
@@ -84,7 +84,7 @@ $ docker ps -a
 Sample output
 ```
 CONTAINER ID    IMAGE                           COMMAND        CREATED            STATUS            PORTS       NAMES
-9998c92ff8a1    sjmayotte/route53-dynamic-dns   "npm start"    45 seconds ago     Up 44 seconds                 route53-dynamic-dns
+9998c92ff8a1    Leen15/route53-dynamic-dns   "npm start"    45 seconds ago     Up 44 seconds                 route53-dynamic-dns
 ```
 View logs of `STDOUT` from `CONTAINER ID` (copy from output above)
 ```bash
@@ -101,9 +101,9 @@ $ docker exec -it [CONTAINER ID] sh
 Steps below assume you have Node.js and NPM installed on machine.  If you do not, please [download and install Node.js and NPM](https://nodejs.org/en/download/) before proceeding.
 
 ### Download Release
-Download release `version` from [release repository](https://github.com/sjmayotte/route53-dynamic-dns/releases).  For example, you can use `v1.0.tar.gz` to download source for release tag `v1.0`.
+Download release `version` from [release repository](https://github.com/Leen15/route53-dynamic-dns/releases).  For example, you can use `v1.0.tar.gz` to download source for release tag `v1.0`.
 ```bash
-$ curl -sL https://github.com/sjmayotte/route53-dynamic-dns/archive/[version] | tar xz
+$ curl -sL https://github.com/Leen15/route53-dynamic-dns/archive/[version] | tar xz
 $ cd route53-dynamic-dns
 ```
 
@@ -145,7 +145,7 @@ If running in Docker Container use the following command to access a shell:
 Application logs are written to `application.log` in root project directory.  Log files are compressed and archived after reaching 10MB in size.  The most recent 3 archives are kept in rotation.  All other archives are deleted to keep footprint small.
 
 # Issues
-If you run into any issues, check to make sure all variables are set properly in `.env` or passed properly into Docker Container at runtime.  If you are sure your environment variables are correct, please open an [issue](https://github.com/sjmayotte/route53-dynamic-dns/issues) and provide as much detail as possible.
+If you run into any issues, check to make sure all variables are set properly in `.env` or passed properly into Docker Container at runtime.  If you are sure your environment variables are correct, please open an [issue](https://github.com/Leen15/route53-dynamic-dns/issues) and provide as much detail as possible.
 
 # License
 ## MIT
@@ -155,4 +155,3 @@ Route53 Dynamic DNS is licensed under the MIT License (https://opensource.org/li
 The following 3rd-party software components may be used by or distributed with route53-dynamic-dns: https://app.fossa.io/reports/f5377d5f-557e-4e21-8bfa-93a27ea6e540
 
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fsjmayotte%2Froute53-dynamic-dns.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fsjmayotte%2Froute53-dynamic-dns?ref=badge_large)
