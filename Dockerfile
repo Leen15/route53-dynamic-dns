@@ -8,10 +8,10 @@ ARG VERSION
 LABEL org.label-schema.build-date=$BUILD_DATE \
     org.label-schema.name="Route53 DynamicDNS" \
     org.label-schema.description="Update AWS Route53 hosted zone with current public IP address. Alternative to Dynamic DNS services such as Dyn, No-IP, etc" \
-    org.label-schema.url="https://github.com/sjmayotte/route53-dynamic-dns" \
+    org.label-schema.url="https://github.com/Leen15/route53-dynamic-dns" \
     org.label-schema.vcs-ref=$VCS_REF \
-    org.label-schema.vcs-url="https://github.com/sjmayotte/route53-dynamic-dns" \
-    org.label-schema.vendor="sjmayotte" \
+    org.label-schema.vcs-url="https://github.com/Leen15/route53-dynamic-dns" \
+    org.label-schema.vendor="Leen15" \
     org.label-schema.version=$VERSION \
     org.label-schema.schema-version="1.0"
 
